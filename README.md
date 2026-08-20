@@ -1,2 +1,3 @@
 # Orquestacion_servidores_auth2.0_kubernetes
 Foro de debate de Orquestación de Servidores
+Este proyecto de investigación analiza herramientas y metodologías modernas para el desarrollo, despliegue y gestión de aplicaciones en entornos distribuidos y en la nube. Aborda la orquestación de servidores, Kubernetes para gestión de contenedores, arquitectura de microservicios, OAuth 2.0 para control seguro de accesos, y la metodología 12 Factor App para garantizar portabilidad y escalabilidad. En conjunto, estos enfoques buscan mejorar la eficiencia, resiliencia y flexibilidad de los sistemas modernos.
