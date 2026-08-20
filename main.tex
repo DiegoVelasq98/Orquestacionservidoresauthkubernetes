@@ -1,0 +1,157 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[a4paper, top=2.4cm, bottom=2.4cm, left=2.4cm, right=2.4cm]{geometry}
+\usepackage{times} % Times New Roman
+\setlength{\parindent}{0pt}
+\usepackage[spanish]{babel}
+\usepackage{url}
+
+\begin{document}
+
+\begin{center}
+    {\bfseries\uppercase{Orquestación de servidores, Kubernetes, Microservicios, OAuth 2.0 e Implementación en la nube (12-Factor Application}} \\
+\textit{D. F. Velásquez Pichilla}\\
+\textit{7690-16-3882 Universidad Mariano Gálvez}\\
+\textit{Seminario de Tecnología de Información}\\
+\textit{dvelasquezp4@miumg.edu.gt}\\
+\end{center}
+
+\textbf{URL REPOSITORIO LA TEX: } \\
+https://github.com/DiegoVelasq98/Orquestacionservidoresauthkubernetes.git
+
+\vspace{1em}
+\noindent\textbf{Resumen}\\
+El presente trabajo de investigación examina las herramientas, metodologías y enfoques modernos empleados para el desarrollo, despliegue y gestión de aplicaciones y sistemas en entornos distribuidos y en la nube. Ante la creciente complejidad de los sistemas informáticos actuales, las organizaciones requieren mecanismos que permitan automatizar y coordinar procesos técnicos, administrar eficientemente cargas de trabajo y contenedores, y estructurar sus aplicaciones de manera modular y escalable.
+En este contexto, se analizan cinco pilares fundamentales: la orquestación de servidores, como base para automatizar tareas de infraestructura; Kubernetes, como plataforma líder para la administración y orquestación de contenedores; la arquitectura de microservicios, que permite dividir aplicaciones monolíticas en componentes independientes y desplegables por separado; el protocolo OAuth 2.0, que garantiza el control seguro de accesos y permisos entre sistemas y usuarios; y la metodología 12 Factor App, que establece buenas prácticas para lograr aplicaciones portables, consistentes y fácilmente escalables entre distintos entornos.
+Estos enfoques, al integrarse de manera conjunta, contribuyen significativamente a mejorar la eficiencia operativa, la resiliencia ante fallos, la productividad de los equipos de desarrollo y la flexibilidad de los sistemas frente a los cambios del entorno tecnológico. Así, la investigación busca ofrecer una visión integral de cómo estas herramientas y prácticas convergen para dar respuesta a los desafíos actuales del desarrollo de software moderno, especialmente en contextos de computación en la nube y arquitecturas distribuidas.\\
+
+\noindent\textbf{Palabras clave: } servicios, nube, autenticación, independiente
+
+\vspace{1em}
+\noindent\textbf{Orquestación de servidores} \\
+Cuando nos referimos a orquestación, estamos siempre haciendo referencia a una automatización pero mas ampliada. Y el uso de estas herramientas brindan a las organizaciones el poder controlar y automatizar flujos de trabajo que se encuentren de forma interconectada , sistemas informáticos, servicios e intermediarios como middlewares dentro de un entorno informático. Es algo muy vérsatil y también pude ser aplicado a aquellos entornos distribuidos en la nube o en entornos propios , es decir en instalaciones. Todo esto para darnos como resultado el poder con grupos de tareas completas desde el comienzo hasta el final.
+\\
+El aplicar la orquestación trae beneficios a las organizaciones, los cuales pueden parecer muy similares a una automatización , pero acá se aplican a procesos mas robustos y extensos como:
+\begin{itemize}
+    \item Reducción de costes: Al automatizar y coordinar tareas complejas , la orquestación ayuda a reducir tiempo, esfuerzo y recursos. 
+    \item Precisión: Se eliminan errores humanos, garantizando procesos mas confiables y consistentes.
+    \item Productividad: Libera cargas a empleados de tareas repetitivas, permitiéndoles enfocarse en otras actividades.
+        \item Procesos estandarizados: Crea procedimientos uniformes en todos los sistemas, agilizando la implementación de nuevos procesos.
+\end{itemize}
+Sin dejar de lado la nube, en la cual es aplicable y obteniendo los mismos beneficios de dicho proceso. Independiente del entorno, siempre se debe de elegir correctamente las herramientas , basándose en criterios como:
+\begin{itemize}
+    \item Necesidad empresarial
+    \item Facilidad de uso
+    \item Escalabilidad
+    \item Auditorias
+    \item Capacidad de análisis
+\end{itemize}
+
+\textbf{Kubernetes} \\
+Es una plataforma de código abierto que permite el poder gestionar cargas de trabajo y servicios en contenedores. Fue creado por Google en el 2014, el cual combina su experiencia con correr aplicaciones en gran escala.
+\\\\
+Tiene varias caráteristicas como:
+\begin{itemize}
+    \item Contenedores
+    \item Microservicios
+    \item Nube portable
+\end{itemize}
+Es decir es un entorno de administración completamente centrado en contenedores. Se encarga de orquestar la infraestructura de equipo, redes y hacer que las cargas de procesos de trabajo para que el usuario final no deba de hacerlo manualmente. Haciendo que su enfoque sea de dos forma, como plataforma de servicio, como de infraestructura como servicio. 
+\\
+Su enfoque en contenedores ayuda a que cada imagen que se genera a partir del empaquetar una aplicación ayuda a tener un entorno mas consistentes desde la etapa de desarrollo hasta la de producción, siendo mejor opción que las maquinas virtuales, brindando la opción de monitoreo ya que todo sera reflejado en el contenedor. Algunos beneficios de esto son:
+\begin{itemize}
+    \item Ágil creaciÓn y despliegue
+    \item Desarrollo, integraciÓn y despliegue continuo
+    \item Observabilidad
+    \item Separar Devs y Ops
+    \item Portabilidad
+    \item Aislamiento de recursos
+    \item Administración de recursos
+\end{itemize}
+
+\textbf{Microservicios } \\
+Este es un enfoque que permite el poder garantizar que nunca se caiga por completo todo un sistema, ya que se deslinda según la funcionalidad que tendrá el sistema, separando por módulos independientes que se comunican entre si, mas no dependen uno del otro. Haciendo que de tal forma se comuniquen unos con otros mediante APIS, permitiendo así tener flexibilidad y un mejor rendimiento del mismo.
+Algunos de los beneficios que obtenemos son:
+\begin{itemize}
+    \item Escalabilidad
+    \item Resilencia
+    \item Mantenimiento
+    \item Reutilización
+    \item Aislamiento de errores
+\end{itemize}
+Siendo asi  una gran alternativa que permita que un sistema siempre este funcionando, solo en caso de ocurrir un fallo  comprometa a un servicio en especifico. Permitiendo detectar mas rapido donde esta y aislarlo,  ademas que permite el poder realizar cada uno de estos con cualquier lenguaje, permitiendo asi una mejor flexibilidad
+ \\ 
+Pero asi como se ve una gran alternativa, siempre resulta dificil implementar, debido a los recursos, no tener claro como funcionara el servicio , ademas de ser muy complejo cuando empresas que van comenzando quieren aplicar este enfoque, ya que conforme crezca mas el servicio, se va haciendo dificil de manejar y de darle mantenimiento.
+ \\
+
+
+ \textbf{OAuth 2.0 } \\
+Este es un factor de autorizacion que se emplea para otorgar permisos de acceso a aplicaciones o servicios a los usuarios , sin dar la contraseña, es decir , hace ese proceso en automatico por el usuario.
+Es un error confundir que ya por defecto es un protocolo de autenticacion ya que este no brinda la certeza de que la persona que esta accediendo sea quien dice ser. Por lo que este solo es un factor mas que puede ser usado para la autorizacion junto con otros, pero no reemplaza a todo lo que implica ser un protocolo de autenticacion, siendo mas usado para la generacion y manejo de los tokens.
+Algunos de los beneficios que obtenemos son:
+\begin{itemize}
+    \item Seguridad
+    \item Control de permisos
+    \item Flexibilidad
+    \item Reutilizacion
+    \item Facil revocacion
+\end{itemize}
+En OAuth 2.0, las concesiones son el conjunto de pasos que un cliente tiene que realizar para obtener la autorización de acceso a los recursos.
+ \\ 
+Pero asi como se ve una gran alternativa, siempre resulta dificil implementar, debido a los recursos, no tener claro como funcionara el servicio , ademas de ser muy complejo cuando empresas que van comenzando quieren aplicar este enfoque, ya que conforme crezca mas el servicio, se va haciendo dificil de manejar y de darle mantenimiento.
+ \\
+
+  \textbf{12 Factor App } \\
+Factor es principalmente un marco para construir aplicaciones de software como servicio – SaaS (Software as a Service) – en la nube. Para entender su enfoque y su aplicación es necesario conocer los tipos de soluciones cloud computing como IaaS, PaaS, SaaS.
+
+Y son:
+\begin{itemize}
+    \item Codebase
+    \item Dependencies
+    \item Configuration
+    \item Backing services
+    \item Build, release, run
+    \item Processes
+    \item Port binding
+    \item Concurrency
+    \item Disposability
+    \item Dev/prod parity
+    \item Logs
+    \item Admin processes
+\end{itemize}
+Estas prácticas abarcan desde la gestión del código fuente y las dependencias, hasta la configuración, el despliegue, los procesos y el manejo de logs. Su objetivo es garantizar que las aplicaciones sean portables entre distintos entornos, fáciles de desplegar y capaces de escalar sin necesidad de realizar cambios importantes en la arquitectura o en las herramientas de desarrollo. Al seguir los 12 factores, se minimizan los errores entre desarrollo y producción, se mejora la resiliencia del sistema y se facilita la automatización de tareas operativas y administrativas.\\
+
+\noindent\textbf{Observaciones y comentarios} 
+\begin{itemize}
+    \item{Es interesante cómo la orquestación y los microservicios transforman la manera de desarrollar y mantener aplicaciones, haciendo los sistemas más flexibles y confiables.}
+    \item{Resulta notable que prácticas como las 12 Factor App y herramientas como Kubernetes simplifiquen procesos complejos, permitiendo un despliegue más ágil y seguro en la nube.}
+\end{itemize}
+
+\noindent\textbf{Conclusiones} 
+\begin{itemize}
+    \item{La combinación de orquestación, microservicios y buenas prácticas como las 12 Factor App permite construir sistemas más eficientes, escalables y resilientes.}
+    \item {Herramientas como Kubernetes y protocolos como OAuth 2.0 facilitan la gestión segura, automatizada y consistente de aplicaciones en entornos modernos, optimizando productividad y reducción de errores.}
+\end{itemize}
+
+
+\begin{thebibliography}{9}
+
+\bibitem{ServiceNow2025}
+ServiceNow. (s.f.). \textit{What is IT Orchestration}. Recuperado de \url{https://www.servicenow.com/es/products/it-operations-management/what-is-it-orchestration.html}
+
+\bibitem{RedHat2025}
+Red Hat. (s.f.). \textit{What is Orchestration}. Recuperado de \url{https://www.redhat.com/es/topics/automation/what-is-orchestration}
+
+\bibitem{Fowler2025}
+Fowler, M. (s.f.). \textit{Microservices}. Recuperado de \url{https://martinfowler.com/articles/microservices.html}
+
+\bibitem{Auth02025}
+Auth0. (s.f.). \textit{What is OAuth 2}. Recuperado de \url{https://auth0.com/es/intro-to-iam/what-is-oauth-2}
+
+\end{thebibliography}
+
+\end{document}
+
+
+
+
